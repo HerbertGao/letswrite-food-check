@@ -42,7 +42,7 @@
 
 	<!--  背景圖  -->
 	<main class="full-block">
-		
+
 		<!--  主要內容  -->
 		<div class="main-block">
 
@@ -67,7 +67,7 @@
 							<input id="vage" type="checkbox" checked>
 							<span class="button round"></span>
 						</label>
-					</div> 
+					</div>
 				</div>
 
 				<!--  start  -->
@@ -102,13 +102,13 @@
 			午餐吃什麼？用抽獎方式來決定今天的午餐吧！由 August 開發，以 Google Excel 當資料庫，介接 Google Map Embed API，輕鬆好管理。
 		</p>
 	</div>
-	
+
 
 	<script>
 
 		// Maps Embed API、Google Sheets API 的 金鑰
 		// 可由 https://console.developers.google.com/apis 申請
-		const embedApiKey = 'AIzaSyDtu-vNL3cTLQF_Tongrtckzfs8LS4ClkM';
+		const embedApiKey = 'AIzaSyD8UTD90q4N_-rvyKcXv8ane5D8c3j_cgM';
 
 		const uri = 'https://sheets.googleapis.com/v4/spreadsheets/11wLZL0bNoD7ZQwfN3Tkx41YB6IgLbv4ftsrxywA0114/values/lets-write?alt=json&key=' + embedApiKey;
 
@@ -122,11 +122,11 @@
 
 				// 分葷、素，塞入陣列
 				const d = data.values, len =  d.length;
-				
+
 				for(let i = 0; i < len; i++) {
 					d[i][1] === '是' ? vages.push(d[i][0]) : meats.push(d[i][0]);
 				}
-				
+
 
 				// 點擊按鈕後執行
 				let r; // 亂數
@@ -139,7 +139,7 @@
 
 				// 按鈕
 				const btn = document.querySelector('.btn-start');
-				
+
 				btn.addEventListener('click', e => {
 					e.preventDefault();
 
@@ -170,7 +170,7 @@
 						// 亂數決定中選店家
 						txt = toggle[r()];
 						list[0].innerText = txt;
-						
+
 						// 移除動畫
 						setTimeout(() => {
 							// 停止拉霸動畫
